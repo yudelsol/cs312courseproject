@@ -1,0 +1,17 @@
+[Unit]
+Description=Minecraft Server
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/minecraft
+
+ExecStart=/usr/bin/java -Xmx1G -Xms1G -jar minecraft_server.jar nogui
+
+ExecStop=/bin/bash -c 'screen -S minecraft -p 0 -X stuff "stop^M"'
+
+Restart=on-failure
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target
