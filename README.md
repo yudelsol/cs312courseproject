@@ -12,12 +12,12 @@ The following tools are required to run this project:
 
 ### Infrastructure Tools
 
-* **Terraform**: ≥ 1.5+
-* **Ansible**: ≥ 2.10+
+* **Terraform**
+* **Ansible**
 
 ### Local Environment
 
-* Linux / WSL2 (recommended for Windows users)
+* Linux / WSL2 (For Windows users)
 * OpenSSH client
 * Git
 
@@ -68,7 +68,6 @@ minecraft-server-iac/
 │   ├── inventory.ini
 │
 ├── scripts/
-│   ├── deploy.sh
 │   ├── update_inventory.sh
 │
 └── README.md
